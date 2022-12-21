@@ -91,8 +91,7 @@ int set_alias(char *alias_string, data_of_program *data)
 		}
 	/* Iterates through the alias list and check for coincidence of the varname */
 	for (j = 0; data->alias_list[j]; j++)
-		if (str_compare(buffer, data->alias_list[j], i) &&
-			data->alias_list[j][i] == '=')
+		if (str_compare(buffer, data->alias_list[j], i) && data->alias_list[j][i] == '=')
 		{/* if the alias alredy exist */
 			free(data->alias_list[j]);
 			break;
